@@ -1,7 +1,7 @@
 #include <iostream>
 #include <conio.h>
 using namespace std;
-//####################################
+
 class transport
 {
 public:
@@ -14,25 +14,19 @@ public:
 
 	void basicInfo()
 	{
-		cout << "- вага: "<< weight << endl;
-		cout << "- кiлькiсть мiсць: "<< seats << endl;
+		cout << "- weight: "<< weight << endl;
+		cout << "- seats: "<< seats << endl;
 		  	}
-
-
-
-
   	};
 
-
-//####################################
 class privat: public transport
 {
 public:
 
 void get(){
-cout << "Вага: ";
+cout << "Weight: ";
 cin >> weight;
-cout << "Кiлькiсть мiсць: ";
+cout << "Seats: ";
 cin >> seats;
 
 }
@@ -46,19 +40,18 @@ public:
  int standPlaces;
 
 void get(){
-cout << "Введiть вагу: ";
+cout << "Enter weight: ";
 cin >> weight;
-cout << "Введiть кiлькiсть мiсць для сидiння: ";
+cout << "Enter the number of places for seating: ";
 cin >> seats;
- cout << "Введiть цiну за проїзд: ";
+ cout << "Enter the price of the fare: ";
  cin >> price;
- cout << "Введiть кiлькiсть мiсць для стояння: ";
+ cout << "Enter the number of seats for standing: ";
  cin >> standPlaces;
-
 
 }
 };
-//####################################
+
 class avto: public privat
 {
 public:
@@ -73,18 +66,18 @@ class vavto: public privat
 public:
  double maxWeight;
 	void get(){
-         cout << "Введiть вагу транспорту: ";
+         cout << "Enter the weight of the vehicle: ";
  cin >> weight;
 
- cout << "Введiть кiлькiсть мiсць: ";
+ cout << "Enter the number of seats: ";
  cin >> seats;
 
- cout << "Введiть максимальну вагу вантажу: ";
+ cout << "Enter the maximum weight load: ";
  cin >> maxWeight;
  }
 	void out()
 	{
- cout << "- вантажопiдйомнiсть: " << maxWeight << endl;
+ cout << "- capacity: " << maxWeight << endl;
 	}
 };
 
@@ -93,7 +86,7 @@ class lavto: public privat
 public:
 	void out()
 	{
-		cout<<"3.Легковий автомобiль\n";
+		cout<<"3.Car\n";
 	}
 };
 
@@ -103,8 +96,8 @@ class bus: public publ
 public:
 	void out()
 	{
- cout << "- цiна за проїзд: " << price << endl;
- cout << "- мiсця для стоячих: " << standPlaces << endl;
+ cout << "- price of the fare: " << price << endl;
+ cout << "- places for standing: " << standPlaces << endl;
 	}
 
 };
@@ -114,8 +107,8 @@ class tbus: public publ
 public:
 	void out()
 	{
- cout << "- цiна за проїзд: " << price << endl;
- cout << "- мiсця длястоячих: " << standPlaces << endl;
+ cout << "- prace of the fare: " << price << endl;
+ cout << "- :places for standing " << standPlaces << endl;
 	}
 
 };
@@ -125,8 +118,8 @@ class tram: public publ
 public:
 	void out()
 	{
- cout << "- цiна за проїзд: " << price << endl;
- cout << "- мiсця длястоячих: " << standPlaces << endl;
+ cout << "- prace of the fare: " << price << endl;
+ cout << "- places for standing: " << standPlaces << endl;
 	}
 
 };
@@ -154,13 +147,13 @@ int main()
 	mas[7]=new tram;
    // mas[7]=new tram2;
 
- cout << "Транспортнi засоби: \n";
- cout << " 1. Автомобiль\n";
- cout << " 2. Вантажний автомобiль\n";
- cout << " 3. Легковий автомобiль\n";
- cout << " 4. Автобус\n";
- cout << " 5. Тролейбус\n";
- cout << " 6. Трамвай\n";
+ cout << ": Transport\n";
+ cout << " 1. Аuto\n";
+ cout << " 2. Truck\n";
+ cout << " 3. Car\n";
+ cout << " 4. Bus\n";
+ cout << " 5. Trolleybus\n";
+ cout << " 6. Tram\n";
 
 
 	cout << endl;
